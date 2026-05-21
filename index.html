@@ -1,0 +1,2122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCTO Learnerships | BConsult — Accredited Training That Delivers Results</title>
+    <meta name="description" content="QCTO-accredited learnerships for South African companies. Maximize your Skills Development Levy, earn B-BBEE points, and build a pipeline of qualified talent.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --trust-blue: #0A2540;
+            --deep-navy: #061827;
+            --action-orange: #FF6B35;
+            --action-hover: #E55A2B;
+            --success-green: #00C853;
+            --gold: #FFB800;
+            --soft-gold: #FFF3D6;
+            --light-bg: #F6F9FC;
+            --white: #FFFFFF;
+            --text-body: #4A5568;
+            --text-heading: #0A2540;
+            --border: #E2E8F0;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --radius: 12px;
+            --radius-lg: 20px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-body);
+            background: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--action-orange), var(--gold));
+            z-index: 9999;
+            width: 0%;
+            transition: width 0.1s;
+        }
+
+        /* Urgency Banner */
+        .urgency-banner {
+            background: linear-gradient(90deg, var(--trust-blue), var(--deep-navy));
+            color: var(--white);
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+            animation: bannerPulse 3s ease-in-out infinite;
+        }
+
+        .urgency-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        @keyframes bannerPulse {
+            0%, 100% { background: linear-gradient(90deg, var(--trust-blue), var(--deep-navy)); }
+            50% { background: linear-gradient(90deg, #0d3050, var(--trust-blue)); }
+        }
+
+        .urgency-banner strong { color: var(--gold); }
+        .urgency-banner .countdown-mini { 
+            display: inline-flex; 
+            gap: 8px; 
+            margin-left: 12px; 
+            font-variant-numeric: tabular-nums;
+        }
+        .countdown-mini span {
+            background: rgba(255,255,255,0.15);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--trust-blue);
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+            z-index: 1000;
+            padding: 0 5%;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+
+        .logo span { color: var(--action-orange); }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--action-orange);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--action-orange); }
+        .nav-links a:hover::after { width: 100%; }
+
+        .nav-cta {
+            background: var(--action-orange);
+            color: var(--white) !important;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all 0.3s !important;
+            box-shadow: 0 4px 15px rgba(255,107,53,0.3);
+        }
+
+        .nav-cta:hover {
+            background: var(--action-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255,107,53,0.4);
+        }
+
+        .nav-cta::after { display: none !important; }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--trust-blue);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: calc(100vh - 120px);
+            align-items: center;
+            padding: 0 5%;
+            gap: 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            z-index: 2;
+            padding: 60px 0;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--soft-gold);
+            color: var(--trust-blue);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .hero-badge i { color: var(--gold); }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            color: var(--text-heading);
+            line-height: 1.1;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero h1 .highlight {
+            color: var(--action-orange);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero h1 .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background: var(--soft-gold);
+            z-index: -1;
+            border-radius: 4px;
+            transform: skewX(-3deg);
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-body);
+            margin-bottom: 32px;
+            max-width: 520px;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--action-orange);
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(255,107,53,0.35);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary:hover::before { left: 100%; }
+        .btn-primary:hover {
+            background: var(--action-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255,107,53,0.45);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--trust-blue);
+            border: 2px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--trust-blue);
+            background: var(--light-bg);
+            transform: translateY(-3px);
+        }
+
+        .hero-trust {
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+        }
+
+        .hero-trust-avatars {
+            display: flex;
+        }
+
+        .hero-trust-avatars img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 3px solid var(--white);
+            margin-left: -10px;
+            object-fit: cover;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .hero-trust-avatars img:first-child { margin-left: 0; }
+
+        .hero-trust-text {
+            font-size: 0.9rem;
+            color: var(--text-body);
+        }
+
+        .hero-trust-text strong { color: var(--text-heading); display: block; }
+
+        .hero-visual {
+            position: relative;
+            height: 100%;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 560px;
+        }
+
+        .hero-image-main {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            z-index: 2;
+            animation: float 6s ease-in-out infinite;
+            object-fit: cover;
+            aspect-ratio: 4/5;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .hero-shape-1 {
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 200px;
+            height: 200px;
+            background: var(--soft-gold);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            z-index: 1;
+            animation: morphShape 8s ease-in-out infinite;
+        }
+
+        .hero-shape-2 {
+            position: absolute;
+            bottom: -40px;
+            left: -40px;
+            width: 160px;
+            height: 160px;
+            background: rgba(255,107,53,0.15);
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            z-index: 1;
+            animation: morphShape 10s ease-in-out infinite reverse;
+        }
+
+        @keyframes morphShape {
+            0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        }
+
+        .hero-stat-float {
+            position: absolute;
+            background: var(--white);
+            padding: 16px 20px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .hero-stat-float.stat-1 {
+            top: 10%;
+            left: -20px;
+            animation-delay: 0s;
+        }
+
+        .hero-stat-float.stat-2 {
+            bottom: 15%;
+            right: -10px;
+            animation-delay: 1s;
+        }
+
+        .hero-stat-float i {
+            width: 40px;
+            height: 40px;
+            background: var(--soft-gold);
+            color: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        .hero-stat-float div strong {
+            display: block;
+            color: var(--text-heading);
+            font-size: 1.1rem;
+        }
+
+        .hero-stat-float div span {
+            font-size: 0.8rem;
+            color: var(--text-body);
+        }
+
+        /* Social Proof Bar */
+        .social-proof-bar {
+            background: var(--trust-blue);
+            color: var(--white);
+            padding: 40px 5%;
+        }
+
+        .social-proof-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 4px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .stat-divider {
+            width: 1px;
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Section Styles */
+        section { padding: 100px 5%; }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--action-orange);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: var(--text-heading);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-body);
+        }
+
+        /* Pain / Problem Section */
+        .problem-section {
+            background: var(--light-bg);
+        }
+
+        .problem-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .problem-visual {
+            position: relative;
+        }
+
+        .problem-visual img {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .problem-card {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--white);
+            padding: 24px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-xl);
+            max-width: 280px;
+            border-left: 4px solid var(--action-orange);
+        }
+
+        .problem-card h4 {
+            color: var(--text-heading);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .problem-card p {
+            font-size: 0.9rem;
+            color: var(--text-body);
+        }
+
+        .problem-list {
+            list-style: none;
+        }
+
+        .problem-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .problem-list li:last-child { border-bottom: none; }
+
+        .problem-list li:hover {
+            padding-left: 10px;
+        }
+
+        .problem-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255,107,53,0.1);
+            color: var(--action-orange);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .problem-list h4 {
+            color: var(--text-heading);
+            margin-bottom: 4px;
+            font-size: 1.1rem;
+        }
+
+        .problem-list p { font-size: 0.95rem; }
+
+        /* Benefits Cards */
+        .benefits-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 40px 32px;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--action-orange), var(--gold));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s;
+        }
+
+        .benefit-card:hover::before { transform: scaleX(1); }
+
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: transparent;
+        }
+
+        .benefit-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--soft-gold);
+            color: var(--gold);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            transition: all 0.3s;
+        }
+
+        .benefit-card:hover .benefit-icon {
+            background: var(--action-orange);
+            color: var(--white);
+            transform: rotate(-5deg) scale(1.1);
+        }
+
+        .benefit-card h3 {
+            color: var(--text-heading);
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .benefit-card p { font-size: 0.95rem; }
+
+        /* How It Works */
+        .process-section { background: var(--light-bg); }
+
+        .process-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            position: relative;
+        }
+
+        .process-grid::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 12.5%;
+            right: 12.5%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--action-orange), var(--gold));
+            z-index: 0;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--white);
+            border: 3px solid var(--action-orange);
+            color: var(--action-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin: 0 auto 24px;
+            position: relative;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-md);
+        }
+
+        .process-step:hover .step-number {
+            background: var(--action-orange);
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        .process-step h4 {
+            color: var(--text-heading);
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .process-step p {
+            font-size: 0.9rem;
+            color: var(--text-body);
+        }
+
+        /* Scarcity / Urgency Section */
+        .scarcity-section {
+            background: linear-gradient(135deg, var(--trust-blue), var(--deep-navy));
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .scarcity-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,184,0,0.05) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .scarcity-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .scarcity-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 16px;
+        }
+
+        .scarcity-section > div > p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .countdown-box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: var(--radius);
+            padding: 24px 32px;
+            min-width: 120px;
+        }
+
+        .countdown-box .number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--gold);
+            line-height: 1;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .countdown-box .label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 8px;
+            opacity: 0.8;
+        }
+
+        .scarcity-badges {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+        .scarcity-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+
+        .scarcity-badge i { color: var(--success-green); }
+
+        /* Testimonials */
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            color: var(--soft-gold);
+            line-height: 1;
+            opacity: 0.6;
+        }
+
+        .testimonial-stars {
+            color: var(--gold);
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            color: var(--text-body);
+            margin-bottom: 24px;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--soft-gold);
+        }
+
+        .testimonial-author div strong {
+            display: block;
+            color: var(--text-heading);
+            font-size: 0.95rem;
+        }
+
+        .testimonial-author div span {
+            font-size: 0.85rem;
+            color: var(--text-body);
+        }
+
+        /* Value Anchor / Pricing */
+        .value-section { background: var(--light-bg); }
+
+        .value-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .value-visual {
+            background: linear-gradient(135deg, var(--trust-blue), var(--deep-navy));
+            color: var(--white);
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-visual::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,184,0,0.1);
+            border-radius: 50%;
+        }
+
+        .value-visual h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .value-visual .price-old {
+            font-size: 1.5rem;
+            text-decoration: line-through;
+            opacity: 0.6;
+            margin-bottom: 8px;
+        }
+
+        .value-visual .price-new {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .value-visual .price-note {
+            margin-top: 16px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .value-details {
+            padding: 60px 40px;
+        }
+
+        .value-details h4 {
+            color: var(--text-heading);
+            font-size: 1.3rem;
+            margin-bottom: 24px;
+        }
+
+        .value-list {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .value-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            font-size: 0.95rem;
+        }
+
+        .value-list li i {
+            color: var(--success-green);
+            font-size: 1.1rem;
+        }
+
+        .value-highlight {
+            background: var(--soft-gold);
+            border-left: 4px solid var(--gold);
+            padding: 16px 20px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin-bottom: 24px;
+        }
+
+        .value-highlight strong {
+            color: var(--text-heading);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .value-highlight span {
+            font-size: 0.9rem;
+            color: var(--text-body);
+        }
+
+        /* FAQ Accordion */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 24px 0;
+            text-align: left;
+            font-family: inherit;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-heading);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover { color: var(--action-orange); }
+
+        .faq-question i {
+            transition: transform 0.3s;
+            color: var(--action-orange);
+        }
+
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 24px;
+        }
+
+        .faq-answer p {
+            color: var(--text-body);
+            line-height: 1.7;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--trust-blue), var(--deep-navy));
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,184,0,0.05)" stroke-width="0.5"/></svg>');
+            background-size: 100px 100px;
+            opacity: 0.5;
+        }
+
+        .final-cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .final-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .final-cta .btn-primary {
+            background: var(--action-orange);
+            font-size: 1.1rem;
+            padding: 20px 48px;
+        }
+
+        .final-cta .btn-primary:hover {
+            background: var(--gold);
+            color: var(--trust-blue);
+        }
+
+        .guarantee-text {
+            margin-top: 24px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        /* Sticky Footer CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            padding: 16px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 999;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+            transform: translateY(100%);
+            transition: transform 0.4s;
+        }
+
+        .sticky-cta.visible { transform: translateY(0); }
+
+        .sticky-cta-text strong {
+            color: var(--text-heading);
+            font-size: 1rem;
+        }
+
+        .sticky-cta-text span {
+            font-size: 0.85rem;
+            color: var(--text-body);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--deep-navy);
+            color: rgba(255,255,255,0.7);
+            padding: 60px 5% 30px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer-social a:hover {
+            background: var(--action-orange);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li { margin-bottom: 10px; }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: var(--gold); }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero { grid-template-columns: 1fr; text-align: center; }
+            .hero-content { padding: 40px 0; }
+            .hero-subtitle { margin: 0 auto 32px; }
+            .hero-buttons { justify-content: center; }
+            .hero-trust { justify-content: center; }
+            .hero-visual { min-height: 400px; order: -1; }
+            .hero-image-wrapper { max-width: 400px; }
+            .hero-stat-float { display: none; }
+            .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+            .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+            .value-card { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .social-proof-inner { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+            .stat-divider { display: none; }
+            .problem-grid { grid-template-columns: 1fr; }
+            .benefits-grid { grid-template-columns: 1fr; }
+            .process-grid { grid-template-columns: 1fr; }
+            .process-grid::before { display: none; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .countdown-container { gap: 10px; }
+            .countdown-box { padding: 16px 20px; min-width: 80px; }
+            .countdown-box .number { font-size: 2rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+            .sticky-cta { flex-direction: column; gap: 12px; text-align: center; }
+            .sticky-cta .btn { width: 100%; justify-content: center; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 2.2rem; }
+            .btn { padding: 14px 24px; font-size: 0.9rem; }
+            section { padding: 60px 5%; }
+        }
+    
+        /* Yellow Button Override */
+        .btn-yellow {
+            background: var(--gold) !important;
+            color: var(--trust-blue) !important;
+            box-shadow: 0 4px 20px rgba(255,184,0,0.35) !important;
+        }
+        .btn-yellow:hover {
+            background: #e6a600 !important;
+            color: var(--trust-blue) !important;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255,184,0,0.45) !important;
+        }
+        .btn-yellow::before {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent) !important;
+        }
+
+        /* Problem Image Cards */
+        .problem-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .problem-img-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s;
+            border: 1px solid var(--border);
+        }
+        .problem-img-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        .problem-img-card .card-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+        .problem-img-card .card-content {
+            padding: 28px;
+        }
+        .problem-img-card .card-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255,107,53,0.1);
+            color: var(--action-orange);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+        }
+        .problem-img-card h4 {
+            color: var(--text-heading);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        .problem-img-card p {
+            font-size: 0.9rem;
+            color: var(--text-body);
+            line-height: 1.6;
+        }
+
+        /* Process Picture Cards */
+        .process-cards-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .process-pic-card {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            height: 420px;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.4s;
+        }
+        .process-pic-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        .process-pic-card .card-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            transition: transform 0.6s;
+        }
+        .process-pic-card:hover .card-bg {
+            transform: scale(1.1);
+        }
+        .process-pic-card .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(10,37,64,0.95) 0%, rgba(10,37,64,0.6) 50%, rgba(10,37,64,0.3) 100%);
+            z-index: 2;
+        }
+        .process-pic-card .card-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 32px;
+            z-index: 3;
+            color: var(--white);
+        }
+        .process-pic-card .step-num {
+            width: 48px;
+            height: 48px;
+            background: var(--gold);
+            color: var(--trust-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 900;
+            margin-bottom: 16px;
+        }
+        .process-pic-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+        .process-pic-card p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            color: var(--white);
+        }
+
+        /* Larger Testimonial Images */
+        .testimonial-author img {
+            width: 70px !important;
+            height: 70px !important;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--soft-gold);
+        }
+        .testimonial-author div strong {
+            font-size: 1.05rem;
+        }
+        .testimonial-author div span {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 1024px) {
+            .problem-cards-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-cards-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .problem-cards-grid { grid-template-columns: 1fr; }
+            .process-cards-grid { grid-template-columns: 1fr; }
+            .process-pic-card { height: 360px; }
+        }
+
+    </style>
+<base target="_blank">
+<base target="_blank">
+</head>
+<body>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Urgency Banner -->
+    <div class="urgency-banner">
+        <i class="fas fa-fire"></i> 
+        <strong>June 2026 Intake Closing Soon</strong> — Secure your Skills Development Levy tax deduction before the fiscal year ends.
+        <div class="countdown-mini" id="bannerCountdown">
+            <span id="bannerDays">12</span>d
+            <span id="bannerHours">08</span>h
+            <span id="bannerMins">45</span>m
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">
+           <img src="logo.webp">
+        
+        </a>
+        <ul class="nav-links">
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#process">How It Works</a></li>
+            <li><a href="#testimonials">Results</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact" class="nav-cta">Book a Free Consultation</a></li>
+        </ul>
+        <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-certificate"></i>
+                QCTO & SETA Accredited Provider
+            </div>
+            <h1>
+                Turn Your Training Budget Into <span class="highlight">Qualified Talent</span> — Not Just Another Expense
+            </h1>
+            <p class="hero-subtitle">
+                BConsult delivers QCTO-accredited learnerships that maximize your Skills Development Levy, earn B-BBEE points, and build a pipeline of job-ready professionals — without the administrative headache.
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary btn-yellow">
+                    <i class="fas fa-calendar-check"></i>
+                    Book Free Consultation
+                </a>
+                <a href="#process" class="btn btn-secondary">
+                    <i class="fas fa-play-circle"></i>
+                    See How It Works
+                </a>
+            </div>
+            <div class="hero-trust">
+                <div class="hero-trust-avatars">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Graduate">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="Graduate">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="Graduate">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Graduate">
+                </div>
+                <div class="hero-trust-text">
+                    <strong>2,400+ learners</strong> placed into permanent roles since 2019
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-image-wrapper">
+                <div class="hero-shape-1"></div>
+                <div class="hero-shape-2"></div>
+                <img src="https://kimi-web-img.moonshot.cn/img/media.gettyimages.com/6f140c69c617c88867a31e2bae964ce47e13c18a.jpg" alt="Professional trainer leading a diverse South African workplace session" class="hero-image-main">
+
+                <div class="hero-stat-float stat-1">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <strong>94%</strong>
+                        <span>Completion Rate</span>
+                    </div>
+                </div>
+                <div class="hero-stat-float stat-2">
+                    <i class="fas fa-award"></i>
+                    <div>
+                        <strong>Level 1</strong>
+                        <span>B-BBEE Contributor</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Stats Bar -->
+    <div class="social-proof-bar">
+        <div class="social-proof-inner">
+            <div class="stat-item">
+                <h3 class="counter" data-target="2400">0</h3>
+                <p>Learners Successfully Placed</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <h3 class="counter" data-target="156">0</h3>
+                <p>Corporate Clients Nationwide</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <h3 class="counter" data-target="94">0</h3>
+                <p>Pass & Placement Rate %</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <h3 class="counter" data-target="12">0</h3>
+                <p>Years of Proven Track Record</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Problem / Pain Section -->
+    <section class="problem-section" id="problem">
+        <div class="section-header reveal" style="margin-bottom: 50px;">
+            <span class="section-label">The Problem</span>
+            <h2>Why Most Training Spend Fails to Deliver ROI</h2>
+            <p>Companies lose an average of <strong style="color: var(--action-orange);">R340,000 per year</strong> on non-accredited training that doesn't count toward their B-BBEE scorecard or Skills Levy claims.</p>
+        </div>
+        <div class="problem-cards-grid">
+            <div class="problem-img-card reveal">
+                <img src="https://kimi-web-img.moonshot.cn/img/static.vecteezy.com/19e4c24036214de748bb9cc9dd7b19a1d80c1a08.jpg" alt="Frustrated manager with paperwork" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon"><i class="fas fa-file-excel"></i></div>
+                    <h4>Non-Accredited Programs Waste Budget</h4>
+                    <p>Unaccredited training cannot be claimed against your Skills Development Levy, meaning you forfeit up to 20% of your payroll tax recoveries.</p>
+                </div>
+            </div>
+            <div class="problem-img-card reveal reveal-delay-1">
+                <img src="https://kimi-web-img.moonshot.cn/img/c8.alamy.com/405a7a082880f0249dd177ca4a5f26f2860462e6.jpg" alt="Empty chair symbolizing talent gap" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon"><i class="fas fa-user-slash"></i></div>
+                    <h4>Learners Don't Convert to Employees</h4>
+                    <p>Without structured workplace integration, 68% of learners never transition into permanent roles — leaving your talent pipeline empty.</p>
+                </div>
+            </div>
+            <div class="problem-img-card reveal reveal-delay-2">
+                <img src="https://kimi-web-img.moonshot.cn/img/photos.peopleimages.com/28f61e71ef51321563a636336307a181f5977701.jpg" alt="HR manager overwhelmed by admin" class="card-image">
+                <div class="card-content">
+                    <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h4>Administrative Burden Drains HR</h4>
+                    <p>Manual compliance tracking, SETA reporting, and QCTO documentation consume 40+ hours per month of your HR team's capacity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits">
+        <div class="section-header reveal">
+            <span class="section-label">The Solution</span>
+            <h2>Three Ways BConsult Transforms Your Training Investment</h2>
+            <p>Every learnership is designed around neuromarketing-backed behavioral triggers that drive completion, retention, and workplace readiness.</p>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card reveal">
+                <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Guaranteed Compliance & Claims</h3>
+                <p>Full QCTO and SETA accreditation means your training spend is 100% claimable. We handle all paperwork, from enrollment to final moderation, so you never miss a tax deduction deadline.</p>
+            </div>
+            <div class="benefit-card reveal reveal-delay-1">
+                <div class="benefit-icon"><i class="fas fa-users"></i></div>
+                <h3>Workplace-Ready Talent Pipeline</h3>
+                <p>Our learnerships combine theoretical NQF-aligned instruction with structured workplace experience. 89% of our learners are absorbed into permanent roles within 90 days of completion.</p>
+            </div>
+            <div class="benefit-card reveal reveal-delay-2">
+                <div class="benefit-icon"><i class="fas fa-chart-pie"></i></div>
+                <h3>B-BBEE Scorecard Optimization</h3>
+                <p>Earn maximum points under Skills Development and Socio-Economic Development. Our Level 1 B-BBEE status amplifies your recognition level, turning training into a competitive advantage.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="process-section" id="process">
+        <div class="section-header reveal">
+            <span class="section-label">Our Process</span>
+            <h2>From First Call to Qualified Graduate in 4 Steps</h2>
+            <p>We've stripped away the bureaucratic friction. Our streamlined process gets your learners enrolled, trained, and workplace-ready with minimal HR overhead.</p>
+        </div>
+        <div class="process-cards-grid">
+            <div class="process-pic-card reveal">
+                <img src="https://kimi-web-img.moonshot.cn/img/images.peopleimages.com/d0c12c5c8c1fb64c9a8be6969496aec3546f7ea9.jpg" alt="Discovery and strategy meeting" class="card-bg">
+                <div class="card-overlay"></div>
+                <div class="card-text">
+                    <div class="step-num">1</div>
+                    <h4>Discovery & Alignment</h4>
+                    <p>We audit your current Skills Development spend, identify scarce & critical skills gaps, and map the optimal QCTO qualification for your industry.</p>
+                </div>
+            </div>
+            <div class="process-pic-card reveal reveal-delay-1">
+                <img src="https://kimi-web-img.moonshot.cn/img/www.shutterstock.com/6566a9cc60829ed8910ccd9711939dfc0064ec71.jpg" alt="Learner recruitment and interviews" class="card-bg">
+                <div class="card-overlay"></div>
+                <div class="card-text">
+                    <div class="step-num">2</div>
+                    <h4>Learner Recruitment</h4>
+                    <p>We source pre-screened candidates from our national database — or train your existing employees — ensuring the right fit for your culture and technical needs.</p>
+                </div>
+            </div>
+            <div class="process-pic-card reveal reveal-delay-2">
+                <img src="https://kimi-web-img.moonshot.cn/img/voltagecontrol.com/1070b3a44fd8d563cabf65fe20b802a496f56d58.jpg" alt="Training delivery and mentoring" class="card-bg">
+                <div class="card-overlay"></div>
+                <div class="card-text">
+                    <div class="step-num">3</div>
+                    <h4>Delivery & Mentoring</h4>
+                    <p>Blended learning (contact + digital) with dedicated facilitators, monthly progress reports, and on-site workplace coaches to ensure 90%+ attendance.</p>
+                </div>
+            </div>
+            <div class="process-pic-card reveal reveal-delay-3">
+                <img src="https://kimi-web-img.moonshot.cn/img/static.vecteezy.com/3818c34d28d8bb513df84da1f910753f409dbeab.jpg" alt="Assessment and placement success" class="card-bg">
+                <div class="card-overlay"></div>
+                <div class="card-text">
+                    <div class="step-num">4</div>
+                    <h4>Assessment & Placement</h4>
+                    <p>Independent moderation, QCTO certification, and active placement support. We don't stop at graduation — we stop at employment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scarcity / Urgency Section -->
+    <section class="scarcity-section" id="scarcity">
+        <div class="scarcity-content">
+            <span class="section-label" style="color: var(--gold);">Limited Availability</span>
+            <h2>June 2026 Intake Closing in:</h2>
+            <p>Only 24 learner placements remain for this intake cycle. Once closed, the next enrollment window is January 2027 — missing this deadline means forfeiting half a year of Skills Levy recovery.</p>
+
+            <div class="countdown-container">
+                <div class="countdown-box">
+                    <div class="number" id="countDays">12</div>
+                    <div class="label">Days</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="number" id="countHours">08</div>
+                    <div class="label">Hours</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="number" id="countMinutes">45</div>
+                    <div class="label">Minutes</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="number" id="countSeconds">30</div>
+                    <div class="label">Seconds</div>
+                </div>
+            </div>
+
+            <a href="#contact" class="btn btn-primary btn-yellow" style="font-size: 1.1rem; padding: 20px 48px;">
+                <i class="fas fa-lock"></i>
+                Reserve Your Learner Spots Now
+            </a>
+
+            <div class="scarcity-badges">
+                <div class="scarcity-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>No upfront payment required</span>
+                </div>
+                <div class="scarcity-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Claims documentation included</span>
+                </div>
+                <div class="scarcity-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Cancel anytime before intake</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <div class="section-header reveal">
+            <span class="section-label">Social Proof</span>
+            <h2>What HR Directors Say About Working With BConsult</h2>
+            <p>Mirror neuron activation: seeing peers succeed increases mimetic desire and reduces perceived risk in the buyer's brain.</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card reveal">
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"We tried three other training providers before BConsult. The difference was immediate — 100% of our 18 learners completed on time, and we recovered R420,000 in Skills Levy rebates without lifting a finger on the paperwork."</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face" alt="Thandi Mokoena">
+                    <div>
+                        <strong>Thandi Mokoena</strong>
+                        <span>HR Director, Metro Logistics SA</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card reveal reveal-delay-1">
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"The B-BBEE points alone justified the investment. But what surprised us was the quality of candidates — 14 out of 16 learners transitioned into permanent warehouse supervisor roles within 60 days of graduation."</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="John van der Merwe">
+                    <div>
+                        <strong>John van der Merwe</strong>
+                        <span>Group CEO, BuildRight Consortium</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card reveal reveal-delay-2">
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="testimonial-text">"As a medium enterprise, we don't have a dedicated skills development team. BConsult acted as our outsourced SD facilitator — from WSP submission to learner mentoring. Best outsourcing decision we've made."</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face" alt="Priya Naidoo">
+                    <div>
+                        <strong>Priya Naidoo</strong>
+                        <span>Managing Director, Naidoo Consulting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Anchor Section -->
+    <section class="value-section" id="value">
+        <div class="section-header reveal">
+            <span class="section-label">Investment</span>
+            <h2>The Full Value Stack — Not Just Training</h2>
+            <p>Anchoring effect: when you see the total value, the actual investment feels like a bargain. This is what you receive.</p>
+        </div>
+        <div class="value-card reveal">
+            <div class="value-visual">
+                <h3>Total Program Value</h3>
+                <div class="price-old">R 125,000 per learner</div>
+                <div class="price-new">R 42,500</div>
+                <div class="price-note">per learner / 12-month program<br>Inclusive of all assessment & moderation fees</div>
+            </div>
+            <div class="value-details">
+                <h4>What's Included:</h4>
+                <ul class="value-list">
+                    <li><i class="fas fa-check-circle"></i> QCTO-aligned curriculum & materials</li>
+                    <li><i class="fas fa-check-circle"></i> Dedicated facilitator + workplace coach</li>
+                    <li><i class="fas fa-check-circle"></i> Monthly progress & compliance reporting</li>
+                    <li><i class="fas fa-check-circle"></i> Independent moderation & certification</li>
+                    <li><i class="fas fa-check-circle"></i> SETA claims documentation pack</li>
+                    <li><i class="fas fa-check-circle"></i> Post-graduate placement support (90 days)</li>
+                    <li><i class="fas fa-check-circle"></i> B-BBEE verification letter</li>
+                </ul>
+                <div class="value-highlight">
+                    <strong>Risk Reversal Guarantee</strong>
+                    <span>If your learner does not achieve competency within the program period, we provide free re-training at no additional cost.</span>
+                </div>
+                <a href="#contact" class="btn btn-primary btn-yellow" style="width: 100%; justify-content: center;">
+                    <i class="fas fa-paper-plane"></i>
+                    Request a Detailed Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="section-header reveal">
+            <span class="section-label">FAQ</span>
+            <h2>Every Question Your CFO Will Ask</h2>
+            <p>Cognitive fluency: we answer objections before they become mental barriers to action.</p>
+        </div>
+        <div class="faq-container reveal">
+            <div class="faq-item">
+                <button class="faq-question">
+                    How do we claim the Skills Development Levy rebate?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>We provide a complete documentation pack including learner agreements, attendance registers, assessment results, and QCTO certification. This pack is formatted specifically for your SETA and SARS submission. Most clients recover 60-80% of program costs through mandatory and discretionary grants combined.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can we use existing employees, or must we recruit unemployed learners?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Both options qualify for different grant structures. Employed learners qualify for the mandatory grant (20% payroll levy recovery), while unemployed learners unlock additional discretionary funding and higher B-BBEE points under category B. We advise on the optimal mix for your specific scorecard targets.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    What happens if a learner drops out or fails?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Our pre-screening process and dedicated mentoring reduce dropout to under 6% — industry average is 35%. In the rare event of failure, our guarantee covers one free re-assessment. If a learner withdraws within the first 30 days, we replace them at no cost or provide a pro-rata credit.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    How long until we see B-BBEE scorecard improvement?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>B-BBEE points are recognized at your next verification cycle once learners are enrolled and training has commenced. For Skills Development points, evidence of active training is sufficient — you do not need to wait for graduation. Most clients see scorecard movement within 3-6 months.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you offer sector-specific qualifications?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes. We are accredited across Wholesale & Retail, Business Administration, Information Technology, Transport & Logistics, and Generic Management. If your sector requires a specific QCTO qualification not in our current scope, we partner with specialized providers under our project management umbrella — you still deal with one point of contact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="contact">
+        <div class="final-cta-content">
+            <span class="section-label" style="color: var(--gold);">Take Action</span>
+            <h2>Don't Let Another Fiscal Year Pass Without Maximizing Your Training ROI</h2>
+            <p>Every month of delay costs you Skills Levy recoveries and B-BBEE points. Book a 20-minute consultation — we'll audit your current spend and show you exactly what's recoverable.</p>
+            <a href="mailto:info@bconsult.co.za?subject=QCTO%20Learnership%20Consultation%20Request" class="btn btn-primary btn-yellow">
+                <i class="fas fa-calendar-check"></i>
+                Book Your Free Consultation
+            </a>
+            <div class="guarantee-text">
+                <i class="fas fa-shield-alt"></i>
+                No obligation. No sales pressure. Just a clear audit of your recoverable training spend.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">B<span>Consult</span></a>
+                <p>South Africa's trusted partner for QCTO-accredited learnerships, Skills Development consulting, and B-BBEE optimization. We turn compliance into competitive advantage.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Programs</h4>
+                <ul>
+                    <li><a href="#">NQF Level 4 Business Admin</a></li>
+                    <li><a href="#">NQF Level 5 Generic Management</a></li>
+                    <li><a href="#">IT Technical Support</a></li>
+                    <li><a href="#">Warehouse & Retail Operations</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About BConsult</a></li>
+                    <li><a href="#">Accreditation Certificates</a></li>
+                    <li><a href="#">Client Case Studies</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:info@bconsult.co.za">info@bconsult.co.za</a></li>
+                    <li><a href="tel:+27101234567">+27 10 123 4567</a></li>
+                    <li><a href="#">Johannesburg Office</a></li>
+                    <li><a href="#">Cape Town Office</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BConsult (Pty) Ltd. All rights reserved.</p>
+            <p>QCTO Accredited | SETA Aligned | Level 1 B-BBEE Contributor</p>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta" id="stickyCta">
+        <div class="sticky-cta-text">
+            <strong>Ready to claim your Skills Levy rebates?</strong>
+            <span>June intake closes in <span id="stickyDays">12</span> days</span>
+        </div>
+        <a href="#contact" class="btn btn-primary btn-yellow">
+            <i class="fas fa-phone"></i>
+            Book Free Call
+        </a>
+    </div>
+
+    <script>
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (scrollTop / scrollHeight) * 100;
+            document.getElementById('scrollProgress').style.width = scrolled + '%';
+        });
+
+        // Intersection Observer for Reveal Animations
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    const duration = 2000;
+                    const increment = target / (duration / 16);
+                    let current = 0;
+
+                    const updateCounter = () => {
+                        current += increment;
+                        if (current < target) {
+                            counter.textContent = Math.floor(current).toLocaleString();
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = target.toLocaleString() + (target < 100 ? '%' : '+');
+                        }
+                    };
+                    updateCounter();
+                    counterObserver.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => counterObserver.observe(counter));
+
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const target = new Date();
+            target.setDate(target.getDate() + 12);
+            target.setHours(17, 0, 0, 0);
+
+            const diff = target - now;
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('countDays').textContent = String(days).padStart(2, '0');
+                document.getElementById('countHours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('countMinutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('countSeconds').textContent = String(seconds).padStart(2, '0');
+
+                document.getElementById('bannerDays').textContent = String(days).padStart(2, '0');
+                document.getElementById('bannerHours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('bannerMins').textContent = String(minutes).padStart(2, '0');
+
+                document.getElementById('stickyDays').textContent = days;
+            }
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Sticky CTA Visibility
+        const stickyCta = document.getElementById('stickyCta');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 800) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Magnetic Button Effect (subtle)
+        document.querySelectorAll('.btn-primary').forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                btn.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translate(0, 0)';
+            });
+        });
+    </script>
+</body>
+</html>
